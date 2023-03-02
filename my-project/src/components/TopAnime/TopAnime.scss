@@ -1,0 +1,86 @@
+//color palette
+//
+$rose: #77575b;
+$rosy: #dc9e95;
+$auburn: #9c201d;
+/* $brown: #fad1ca9; */
+$misty: #ffe7e7;
+$mountbatten: #967578;
+$night: #141313;
+$rusty: #cc3d4b;
+$cinereous: #fad1ca9f;
+
+/*-----------------------------------------*/
+
+//fonts
+$main-font: "Baloo Chettan 2", cursive;
+$details-font: "Poppins", sans-serif;
+
+/*-----------------------------------------*/
+
+.topAnimes {
+  margin-left: 2rem;
+
+  &__title {
+    color: $rose;
+    font-size: 2em;
+    font-weight: bolder;
+  }
+
+  .mt-8 {
+    margin: 5rem 1rem;
+    color: $auburn;
+    font-weight: bolder;
+    font-size: 2em;
+
+    @media (max-width: 860px) {
+      width: 10rem;
+      margin: 0;
+    }
+  }
+
+  &__img {
+    margin-bottom: 2rem;
+    width: 10rem;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgb(0 0 0 / 0.2);
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    @media (max-width: 860px) {
+      width: 8rem;
+      margin-left: -7rem;
+    }
+  }
+
+  &__info {
+    margin-top: 2rem;
+    margin-left: 2rem;
+    color: $mountbatten;
+    font-weight: bolder;
+    font-size: 2em;
+
+    @media (max-width: 860px) {
+      font-size: 18px;
+    }
+  }
+
+  &__tag {
+    margin-top: 4rem;
+    text-align: center;
+    padding: 0.5em 0.6em;
+    background-color: $rosy;
+    border-radius: 15px;
+    color: $misty;
+
+    &:hover {
+      background-color: $auburn;
+    }
+    @media (max-width: 860px) {
+      display: none;
+    }
+  }
+}

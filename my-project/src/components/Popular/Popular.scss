@@ -1,0 +1,54 @@
+//color palette
+//
+$rose: #77575b;
+$rosy: #dc9e95;
+$auburn: #9c201d;
+/* $brown: #fad1ca9; */
+$misty: #ffe7e7;
+$mountbatten: #967578;
+$night: #141313;
+$rusty: #cc3d4b;
+$cinereous: #fad1ca9f;
+
+/*-----------------------------------------*/
+
+//fonts
+$main-font: "Baloo Chettan 2", cursive;
+$details-font: "Poppins", sans-serif;
+
+/*-----------------------------------------*/
+
+.popular {
+  font-family: $main-font;
+  font-size: 2em;
+  font-weight: bolder;
+  color: $rose;
+  margin-left: 2rem;
+
+  @media (max-width: 860px) {
+    font-size: 1.3em;
+  }
+
+  &__text {
+    color: $mountbatten;
+    font-size: 20px;
+    margin-left: 5rem;
+    @media (max-width: 860px) {
+      margin-left: 2rem;
+    }
+  }
+
+  &__img {
+    width: 15rem;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgb(0 0 0 / 0.2);
+    &:hover {
+      opacity: 0.5;
+    }
+
+    @media (max-width: 860px) {
+      width: 10rem;
+    }
+  }
+}

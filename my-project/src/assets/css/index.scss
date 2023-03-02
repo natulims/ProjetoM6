@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+//color palette
+//
+$rose: #77575b;
+$rosy: #dc9e95;
+$auburn: #9c201d;
+/* $brown: #fad1ca9; */
+$misty: #ffe7e7;
+$mountbatten: #967578;
+$night: #141313;
+$rusty: #cc3d4b;
+$cinereous: #fad1ca9f;
+
+/*-----------------------------------------*/
+
+//fonts
+$main-font: "Baloo Chettan 2", cursive;
+$details-font: "Poppins", sans-serif;
+
+/*-----------------------------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $main-font;
+  background-color: $misty;
+  ::selection {
+    background-color: $rosy;
+  }
+}

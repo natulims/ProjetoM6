@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* $brown: #fad1ca9; */
+/*-----------------------------------------*/
+/*-----------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Baloo Chettan 2", cursive;
+  background-color: #ffe7e7;
+}
+body ::-moz-selection {
+  background-color: #dc9e95;
+}
+body ::selection {
+  background-color: #dc9e95;
+}/*# sourceMappingURL=index.css.map */
