@@ -16,7 +16,9 @@ body {
 }
 body ::-moz-selection {
   background-color: #dc9e95;
+  color: #967578;
 }
 body ::selection {
   background-color: #dc9e95;
+  color: #967578;
 }/*# sourceMappingURL=index.css.map */

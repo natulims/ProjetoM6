@@ -1,24 +1,26 @@
 import React from "react";
-import Popular from "./components/Popular/Popular";
-import Trending from "./components/Trending/Trending";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
-import Header from "./components/Header/Header";
-import TopAnime from "./components/TopAnime/TopAnime";
-import Power from "./components/Power/Power";
-import Footer from "./components/Footer/Footer";
+import Home from "./pages/Home/Home";
+import Login from "./pages/Login/Login";
+import MyList from "./pages/MyList/MyList";
 import SignUp from "./pages/SignUp/SignUp";
 
 function App() {
   return (
     <>
-    <SignUp/>
-      <Navbar />
-      <Header />
-      <Popular />
-      <Trending />
-      <TopAnime />
-      <Power />
-      <Footer />
+      <BrowserRouter>
+        <Routes>
+          <Route>
+            <Route path="/" element={<Navbar />}>
+              <Route path="/" element={<Home/>}/>
+              <Route path="/my_list" element={<MyList />} />
+              <Route path="/Login" element={<Login />} />
+              <Route path="/sign_up" element={<SignUp />} />
+            </Route>
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

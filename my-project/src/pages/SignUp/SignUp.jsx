@@ -1,4 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import Power from "../../components/Power/Power";
+import Footer from "../../components/Footer/Footer";
 
 function SignUp() {
   return (
@@ -6,7 +9,7 @@ function SignUp() {
       <div className="flex flex-col items-center min-h-screen pt-6 sm:justify-center sm:pt-0 bg-misty">
         <div>
           <a href="/">
-            <h3 className="text-4xl font-bold text-auburn">Sign Up</h3>
+            <h3 className="text-4xl font-bold text-mountbatten">Sign Up</h3>
           </a>
         </div>
         <div className="w-full px-6 py-4 mt-6 overflow-hidden bg-red-50 shadow-md sm:max-w-lg sm:rounded-lg">
@@ -14,7 +17,7 @@ function SignUp() {
             <div>
               <label
                 htmlFor="name"
-                className="block text-sm font-medium text-auburn undefined"
+                className="block text-sm font-medium text-mountbatten undefined"
               >
                 Name
               </label>
@@ -29,7 +32,7 @@ function SignUp() {
             <div className="mt-4">
               <label
                 htmlFor="email"
-                className="block text-sm font-medium text-auburn undefined"
+                className="block text-sm font-medium text-mountbatten undefined"
               >
                 Email
               </label>
@@ -44,7 +47,7 @@ function SignUp() {
             <div className="mt-4">
               <label
                 htmlFor="password"
-                className="block text-sm font-medium text-auburn undefined"
+                className="block text-sm font-medium text-mountbatten undefined"
               >
                 Password
               </label>
@@ -59,7 +62,7 @@ function SignUp() {
             <div className="mt-4">
               <label
                 htmlFor="password_confirmation"
-                className="block text-sm font-medium text-auburn undefined"
+                className="block text-sm font-medium text-mountbatten undefined"
               >
                 Confirm Password
               </label>
@@ -81,11 +84,11 @@ function SignUp() {
             </div>
           </form>
           <div className="mt-4 text-mountbatten">
-            Already have an account?{" "}
+            Already have an account?
             <span>
-              <a className="text-rusty hover:underline" href="#">
+              <Link className="text-rusty hover:underline" to="/login">
                 Log in
-              </a>
+              </Link>
             </span>
           </div>
           <div className="flex items-center w-full my-4">
@@ -108,10 +111,11 @@ function SignUp() {
               </svg>
               <p>Login with Google</p>
             </button>
-            
           </div>
         </div>
       </div>
+      <Power />
+      <Footer />
     </>
   );
 }

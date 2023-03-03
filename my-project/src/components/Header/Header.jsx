@@ -2,7 +2,9 @@ import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { fadeIn } from "../../utilities/variant";
 import banner from "../../assets/img/banner.png";
+
 import "../Header/Header.css";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -19,9 +21,11 @@ function Header() {
             Track, share and discover your new favorite anime with
             <span className="header__span"> Anikaze</span>
             <p>
-              <button className="header__button">
-                login <i class="bx bx-right-arrow-alt"></i>
-              </button>
+              <Link to="/login">
+                <button className="header__button">
+                  login <i class="bx bx-right-arrow-alt"></i>
+                </button>
+              </Link>
             </p>
           </h2>
 

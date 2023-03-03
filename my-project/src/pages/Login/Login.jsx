@@ -1,36 +1,39 @@
 import React from "react";
+import Power from "../../components/Power/Power";
+import Footer from "../../components/Footer/Footer";
+import { Link } from "react-router-dom";
 
 function Login() {
   return (
     <>
       <div className="relative flex flex-col justify-center min-h-screen overflow-hidden">
-        <div className="w-full p-6 m-auto bg-red-200 rounded-md shadow-md lg:max-w-xl">
-          <h1 className="text-3xl font-semibold text-center text-night underline">
-            Sign in
+        <div className="w-full p-6 m-auto bg-red-50 rounded-md shadow-md lg:max-w-xl">
+          <h1 className="text-3xl font-semibold text-center text-mountbatten">
+            Login
           </h1>
           <form className="mt-6">
             <div className="mb-2">
               <label
                 for="email"
-                className="block text-sm font-semibold text-gray-800"
+                className="block text-sm font-semibold text-mountbatten"
               >
                 Email
               </label>
               <input
                 type="email"
-                className="block w-full px-4 py-2 mt-2 text-rosy bg-misty border rounded-md focus:border-rusty focus:ring-rusty focus:outline-none focus:ring focus:ring-opacity-40"
+                className="block w-full px-4 py-2 mt-2 text-rosy border rounded-md focus:border-rusty focus:ring-rusty focus:outline-none focus:ring focus:ring-opacity-40"
               />
             </div>
             <div className="mb-2">
               <label
                 for="password"
-                className="block text-sm font-semibold text-gray-800"
+                className="block text-sm font-semibold text-mountbatten"
               >
                 Password
               </label>
               <input
                 type="password"
-                className="block w-full px-4 py-2 mt-2 text-mountbatten bg-misty border rounded-md focus:border-rusty focus:ring-rusty focus:outline-none focus:ring focus:ring-opacity-40"
+                className="block w-full px-4 py-2 mt-2 text-mountbatten  border rounded-md focus:border-rusty focus:ring-rusty focus:outline-none focus:ring focus:ring-opacity-40"
               />
             </div>
             <a href="#" className="text-xs text-auburn hover:underline">
@@ -45,15 +48,12 @@ function Login() {
 
           <p className="mt-8 text-xs font-light text-center text-rusty">
             Don't have an account?
-            {/* <a
-              to="/sign_up"
-              className="font-medium text-rose hover:underline"
-            >
-              Sign up
-            </Link> */}
+            <Link to="/sign_up"> Register now!</Link>
           </p>
         </div>
       </div>
+      <Power/>
+      <Footer/>
     </>
   );
 }
