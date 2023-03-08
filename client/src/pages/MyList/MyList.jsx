@@ -5,7 +5,6 @@ import Footer from "../../components/Footer/Footer";
 function MyList() {
   return (
     <>
-      <div>MyList</div>
       <Power />
       <Footer />
     </>
