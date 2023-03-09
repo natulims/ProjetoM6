@@ -17,3 +17,9 @@ $details-font: "Poppins", sans-serif;
 /*-----------------------------------------*/
 
 /*navbar*/
+.navbar {
+  &__logo {
+    width: 200px;
+    margin-top: -5px;
+  }
+}

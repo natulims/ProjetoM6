@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "../../public/logo2.png"
 import "../Footer/Footer.css";
 
 function Footer() {
@@ -8,7 +9,7 @@ function Footer() {
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
             <a href="" className="flex items-center">
-              <img src="" className="h-8 mr-3" alt="Anikaze logo" />
+              <img src={logo} className="h-8 mr-3" alt="Anikaze logo" />
             </a>
           </div>
           <div className="grid grid-cols-2 gap-4 sm:gap-6 sm:grid-cols-3">

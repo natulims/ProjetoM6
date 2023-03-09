@@ -1,4 +1,8 @@
 /* $brown: #fad1ca9; */
 /*-----------------------------------------*/
 /*-----------------------------------------*/
-/*navbar*//*# sourceMappingURL=Navbar.css.map */
+/*navbar*/
+.navbar__logo {
+  width: 200px;
+  margin-top: -5px;
+}/*# sourceMappingURL=Navbar.css.map */
