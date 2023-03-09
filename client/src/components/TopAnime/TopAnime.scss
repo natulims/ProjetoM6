@@ -18,10 +18,11 @@ $details-font: "Poppins", sans-serif;
 
 /*-----------------------------------------*/
 
-.topAnimes {
+.TopAnimes {
   margin-left: 2rem;
 
   &__title {
+    margin-left: 2rem;
     color: $rose;
     font-size: 2em;
     font-weight: bolder;

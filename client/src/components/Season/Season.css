@@ -1,0 +1,39 @@
+/* $brown: #fad1ca9; */
+/*-----------------------------------------*/
+/*-----------------------------------------*/
+.season {
+  font-family: "Baloo Chettan 2", cursive;
+  font-size: 2em;
+  font-weight: bolder;
+  color: #77575b;
+  margin-left: 2rem;
+}
+@media (max-width: 860px) {
+  .season {
+    font-size: 1.3em;
+  }
+}
+.season__text {
+  color: #967578;
+  font-size: 20px;
+  margin-left: 5rem;
+}
+@media (max-width: 860px) {
+  .season__text {
+    margin-left: 2rem;
+  }
+}
+.season__img {
+  width: 15rem;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.season__img:hover {
+  opacity: 0.5;
+}
+@media (max-width: 860px) {
+  .season__img {
+    width: 10rem;
+  }
+}/*# sourceMappingURL=Season.css.map */

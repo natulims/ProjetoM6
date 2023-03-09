@@ -20,11 +20,7 @@ function App() {
           <Route>
             <Route path="/" element={<Navbar />}>
               <Route path="/" element={<Home />} />
-              <Route path="/my_list" element={<MyList />} />
-              {/* <Route
-                  path="/my_list"
-                  element={<Private Item={<MyList />} />}
-                /> */}
+              <Route path="/my_list" element={<Private Item={<MyList />} />} />
               <Route path="/Login" element={<Login />} />
               <Route path="/sign_up" element={<SignUp />} />
             </Route>
