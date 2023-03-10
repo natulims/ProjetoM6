@@ -2,17 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-//color palette
-//
-$rose: #77575b;
-$rosy: #dc9e95;
-$auburn: #9c201d;
-/* $brown: #fad1ca9; */
-$misty: #ffe7e7;
+/*-----------------------------------------*/
+
+//fonts
 $mountbatten: #967578;
-$night: #141313;
-$rusty: #cc3d4b;
-$cinereous: #fad1ca9f;
 
 /*-----------------------------------------*/
 
@@ -22,18 +15,16 @@ $details-font: "Poppins", sans-serif;
 
 /*-----------------------------------------*/
 
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: $main-font;
-  background-color: $misty;
-  ::selection {
-    background-color: $rosy;
+    font-size: 1.5em;
     color: $mountbatten;
-  }
+    font-family: $main-font;
+  background-image: linear-gradient(
+    to top,
+    #f7e7e6,
+    #f4e4e3,
+    #f2e2e0,
+    #efdfde,
+    #ecdddb
+  );
 }

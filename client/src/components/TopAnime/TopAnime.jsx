@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { fadeIn } from "../../utilities/variant";
-import "../TopAnime/TopAnime.css";
+import "../topAnime/topAnime.css";
 
 function TopAnime() {
   const [animes, setAnimes] = useState({ data: [] });
@@ -15,7 +15,6 @@ function TopAnime() {
     const data = await response.json();
     setAnimes(data);
   };
-
   return (
     <>
       <motion.section
@@ -23,42 +22,44 @@ function TopAnime() {
         initial="hidden"
         whileInView={"show"}
         viewport={{ once: false, amount: 0.2 }}
-        className="pb-[40px] pt-[40px] lg:pb-[160px] lg:pt-0"
       >
-        <h3 className="TopAnimes__title">Top 5 Animes</h3>
-
-        <AnimatePresence>
-          {animes.data?.slice(0, 5).map((animeInfo, index) => (
-            <motion.article
-              key={animeInfo.mal_id}
-              className="TopAnimes"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -50 }}
-            >
-              <div className="flex flex-row">
-                <h4 className="mt-8">{index + 1}</h4>
+        <div className="topAnime">
+          <h3 className="topAnime__title">Top Animes</h3>
+          <div className="grid grid-cols-2 gap-2 lg:grid-cols-6">
+            {animes.data?.slice(0, 10).map((animeInfo, index) => (
+              <div key={animeInfo.mal_id} className="topAnime__container">
                 <img
-                  className="TopAnimes__img"
+                  className="topAnime__img"
                   src={animeInfo.images.jpg.image_url}
-                  alt={animeInfo.title}
+                  alt=""
                 />
-                <div className="TopAnimes__list">
-                  <div className="grid grid-rows-2 gap-4">
-                    <p className="TopAnimes__info">{animeInfo.title}</p>
-                    <ul className="grid grid-cols-5 gap-8 mx-3">
-                      {animeInfo.genres.map((genre) => (
-                        <li key={genre.mal_id} className="TopAnimes__tag">
-                          {genre.name}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                <span className="topAnime__text">{animeInfo.title}</span>
+                <div className="upcoming__list">
+                  <button
+                    className="mb-[5rem] ml-15y text-auburn font-semibold text-sm border-none hover:text-rosy"
+                    onClick={() => {
+                      // get the existing list of ids from local storage
+                      const existingIds =
+                        JSON.parse(localStorage.getItem("animeIds")) || [];
+                      // add the current anime's id to the list
+                      if (existingIds.includes(animeInfo.mal_id)) {
+                        return;
+                      }
+                      const updatedIds = [...existingIds, animeInfo.mal_id];
+                      // save the updated list back to local storage
+                      localStorage.setItem(
+                        "animeIds",
+                        JSON.stringify(updatedIds)
+                      );
+                    }}
+                  >
+                    <i className="bx bx-plus"></i> Add to list
+                  </button>
                 </div>
               </div>
-            </motion.article>
-          ))}
-        </AnimatePresence>
+            ))}
+          </div>
+        </div>
       </motion.section>
     </>
   );

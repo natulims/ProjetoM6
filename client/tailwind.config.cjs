@@ -15,17 +15,6 @@ module.exports = {
         cinereous: "#fad1ca9f",
       },
 
-      screens: {
-        xs: "480px",
-      },
-
-      boxShadow: {
-        card:
-          "0 0 1px 0 rgba(189,192,207,0.06),0 10px 16px -1px rgba(189,192,207,0.2)",
-        cardhover:
-          "0 0 1px 0 rgba(189,192,207,0.06),0 10px 16px -1px rgba(189,192,207,0.4)",
-      },
-
       fontFamily: {
         baloo: ["Baloo Chettan 2", "cursive"],
         poppins: ["Poppins", "sans - serif"],

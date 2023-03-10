@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../utilities/variant";
-import "../Season/Season.css";
+import "../season/season.css";
 
-function Season() {
+export default function Season() {
   const [animes, setAnimes] = useState({ data: [] }); // initialize animes state with an empty array
 
   useEffect(() => {
@@ -19,29 +19,28 @@ function Season() {
   return (
     <>
       <motion.section
-        variants={fadeIn("right")}
+        variants={fadeIn("up")}
         initial="hidden"
         whileInView={"show"}
         viewport={{ once: false, amount: 0.2 }}
-        className="pb-[40px] pt-[40px] lg:pb-[160px] lg:pt-0"
+        className=""
       >
-        <section className="season">
-          <h3 className="a">Seasonal animes</h3>
-          <div className="">
-            <div className="grid grid-cols-2 gap-8 lg:grid-cols-5">
-              {animes.data?.slice(0, 10).map((animeInfo) => (
+        <div className="season">
+          <h3 className="season__title">Seasonal Animes</h3>
+          <div className="grid grid-cols-2 gap-2 lg:grid-cols-6">
+          {animes.data?.slice(0, 8).map((animeInfo) => (
                 <div key={animeInfo.mal_id} className="season__container">
                   <img
                     className="season__img"
                     src={animeInfo.images.jpg.image_url}
                     alt=""
                   />
-                  <span className="text-sm break-words">
-                    {animeInfo.title_japanese}
+                  <span className="season__text">
+                    {animeInfo.title}
                   </span>
                   <div className="season__list">
                     <button
-                      className="ml-15y text-auburn font-semibold text-sm border-none hover:text-rosy"
+                      className="mb-[5rem] ml-15y text-auburn font-semibold text-sm border-none hover:text-rosy"
                       onClick={() => {
                         // get the existing list of ids from local storage
                         const existingIds =
@@ -65,10 +64,7 @@ function Season() {
               ))}
             </div>
           </div>
-        </section>
       </motion.section>
     </>
   );
 }
-
-export default Season;
