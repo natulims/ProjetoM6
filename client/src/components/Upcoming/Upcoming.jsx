@@ -18,7 +18,7 @@ function Upcoming() {
   return (
     <>
       <motion.section
-        variants={fadeIn("up")}
+        variants={fadeIn("left")}
         initial="hidden"
         whileInView={"show"}
         viewport={{ once: false, amount: 0.2 }}

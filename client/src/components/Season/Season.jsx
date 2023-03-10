@@ -19,7 +19,7 @@ export default function Season() {
   return (
     <>
       <motion.section
-        variants={fadeIn("up")}
+        variants={fadeIn("right")}
         initial="hidden"
         whileInView={"show"}
         viewport={{ once: false, amount: 0.2 }}
