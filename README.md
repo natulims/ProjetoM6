@@ -38,7 +38,7 @@
 and more...
 </ul>
 <br>
-Illustrations:
+Illustrations:<br>
  <a href="https://www.pixiv.net/en/artworks/88861621">Power Fanart</a><br>
  <a href="https://www.zerochan.net/3868109">Pochita Fanart</a></p>
 <hr/>
