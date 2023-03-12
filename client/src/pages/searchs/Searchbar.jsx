@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import useDebounce from "./useDebounce";
+import useDebounce from "../searchs/useDebounce";
 import Power from "../../components/power/Power";
 
 function Search({ value, onChange }) {

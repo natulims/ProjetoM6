@@ -1,24 +1,70 @@
-import React from "react";
-import Power from "../../components/Power/Power";
-import Footer from "../../components/Footer/Footer";
-import { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { AnimeList } from "./AnimeList";
+import { AddToList } from "../../components/anime/AddToList";
+import { AnimeInfo } from "../../components/anime/AnimeInfo";
+import { RemoveFromList } from "../../components/anime/RemoveFromList";
+function App() {
 
-function MyList() {
-  const animes = JSON.parse(localStorage.getItem("animeIds"));
+  const [search,setSearch]=useState('Naruto')
+  const [animeData,setAnimeData]=useState();
+  const [animeInfo,setAnimeInfo]=useState()
+  const [myAnimeList,setMyAnimeList]=useState([])
 
-  useEffect(() => {
-    console.log(animes);
-  }, []);
+  const addTo=(anime)=>{
+    const index=myAnimeList.findIndex((myanime)=>{
+        return myanime.mal_id === anime.mal_id
+    })
+    if(index < 0){
+      const newArray=[...myAnimeList,anime]
+      setMyAnimeList(newArray);
+    }
+    
+  }
+  const removeFrom=(anime)=>{
+    const newArray=myAnimeList.filter((myanime)=>{
+      return myanime.mal_id !== anime.mal_id
+    })
+    setMyAnimeList(newArray)
+  }
+  const getData=async()=>{
+      const res=await fetch(`https://api.jikan.moe/v4/anime?q=&sfw`)
+      const resData= await res.json();
+      setAnimeData(resData.data)
+  }
+  useEffect(()=>{
+    getData()
+  },[search])
 
   return (
     <>
-      {animes?.map((ids) => (
-        <h1>{ids}</h1>
-      ))}
-      <Power />
-      <Footer />
+        
+        <div className="container">
+          <div className="animeInfo">
+           {animeInfo && <AnimeInfo animeInfo={animeInfo}/>}
+          </div>
+          <div className="anime-row">
+            <h2 className="text-heading">Anime</h2>
+            <div className="row">
+                <AnimeList 
+                animelist={animeData}
+                setAnimeInfo={setAnimeInfo}
+                animeComponent={AddToList}
+                handleList={(anime)=>addTo(anime)}
+                />
+            </div>
+            <h2 className="text-heading">My List</h2>
+            <div className="row">
+                <AnimeList 
+                animelist={myAnimeList}
+                setAnimeInfo={setAnimeInfo}
+                animeComponent={RemoveFromList}
+                handleList={(anime)=>removeFrom(anime)}
+                />
+            </div>
+          </div>
+        </div>
     </>
   );
 }
 
-export default MyList;
+export default App;

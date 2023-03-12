@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../utilities/variant";
+import { AddToList } from "../anime/AddToList";
 
 function Upcoming() {
   const [animes, setAnimes] = useState({ data: [] }); // initialize animes state with an empty array
@@ -16,7 +17,7 @@ function Upcoming() {
 
   return (
     <>
-     <motion.article
+      <motion.article
         variants={fadeIn("right")}
         initial="hidden"
         whileInView={"show"}
@@ -39,6 +40,7 @@ function Upcoming() {
               </figure>
               <div className="w-[10rem] lg:w-[20rem] lg:mt-[-3.5rem] lg:ml-[4rem] flex items-center ml-5">
                 <span className="text-justify tracking-tight text-xl text-rose">
+                <div><AddToList/></div>
                   {animeInfo.title}
                 </span>
               </div>
