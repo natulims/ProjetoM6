@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { fadeIn } from "../../utilities/variant";
 import { Link } from "react-router-dom";
@@ -35,21 +35,18 @@ function Header() {
                 Track, share and
                 <br className="hidden md:block" />
                 discover your new favorite anime with
-                <span className="inline-block text-rosy indent-2">
-                  Anikaze
-                </span>
+                <span className="inline-block text-rosy indent-2">Anikaze</span>
               </h2>
               <p className="space-x-3 pr-5 mb-5 text-base text-mountbatten md:text-lg">
                 Keep track of the most watched animes or which one will have a
                 new season! Customize your favorite list, your profile and much
                 more!
               </p>
-              {/* <Link to="/">
-                {" "} */}
-              <button className="shadow-lg focus:ring focus:ring-rosy  bg-auburn hover:bg-rosy text-misty text-2xl rounded ml-32 font-bold py-3 px-7">
-                login <i class="bx bx-right-arrow-alt"></i>
-              </button>
-              {/* </Link> */}
+              <Link to="/search">
+                <button className="shadow-lg focus:ring focus:ring-rosy  bg-auburn hover:bg-rosy text-misty text-2xl rounded ml-32 font-bold py-3 px-7">
+                  search <i className="bx bx-right-arrow-alt"></i>
+                </button>
+              </Link>
             </div>
           </div>
         </div>
