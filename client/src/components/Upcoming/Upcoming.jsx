@@ -1,71 +1,53 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../utilities/variant";
-import "../upcoming/upcoming.css";
 
 function Upcoming() {
-    const [animes, setAnimes] = useState({ data: [] }); // initialize animes state with an empty array
-    useEffect(() => {
-      fetchAnimes();
-    }, []);
-  
-    const fetchAnimes = async () => {
-      const response = await fetch("https://api.jikan.moe/v4/seasons/upcoming");
-      const data = await response.json();
-      setAnimes(data);
-    };
+  const [animes, setAnimes] = useState({ data: [] }); // initialize animes state with an empty array
+  useEffect(() => {
+    fetchAnimes();
+  }, []);
+
+  const fetchAnimes = async () => {
+    const response = await fetch("https://api.jikan.moe/v4/seasons/upcoming");
+    const data = await response.json();
+    setAnimes(data);
+  };
 
   return (
     <>
-      <motion.section
-        variants={fadeIn("left")}
+     <motion.article
+        variants={fadeIn("right")}
         initial="hidden"
         whileInView={"show"}
         viewport={{ once: false, amount: 0.2 }}
-        className="pb-[40px] pt-[40px] lg:pb-[160px] lg:pt-0"
+        className="m-5"
       >
-        <div className="upcoming">
-          <h3 className="upcoming__title">Upcoming Animes</h3>
-          <div className="grid grid-cols-2 gap-2 lg:grid-cols-6">
-            {animes.data?.slice(0, 11).map((animeInfo) => (
-              <div key={animeInfo.mal_id} className="upcoming__container">
+        <h3 className="text-4xl text-auburn font-bold indent-4">
+          Upcoming Animes!
+        </h3>
+
+        <div className="grid lg:grid-cols-4 grid-cols-2">
+          {animes.data?.slice(0, 8).map((animeInfo) => (
+            <div key={animeInfo.mal_id}>
+              <figure className=" lg:mx-[5rem] lg:my-[5rem] ml-5 mt-10 relative max-w-sm transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0">
                 <img
-                  className="upcoming__img"
+                  className="rounded-lg shadow-lg lg:w-[15rem] w-[10rem]"
                   src={animeInfo.images.jpg.image_url}
                   alt=""
                 />
-                <span className="upcoming__text">
+              </figure>
+              <div className="w-[10rem] lg:w-[20rem] lg:mt-[-3.5rem] lg:ml-[4rem] flex items-center ml-5">
+                <span className="text-justify tracking-tight text-xl text-rose">
                   {animeInfo.title}
                 </span>
-                <div className="upcoming__list">
-                  <button
-                    className="mb-[5rem] ml-15y text-auburn font-semibold text-sm border-none hover:text-rosy"
-                    onClick={() => {
-                      // get the existing list of ids from local storage
-                      const existingIds =
-                        JSON.parse(localStorage.getItem("animeIds")) || [];
-                      // add the current anime's id to the list
-                      if (existingIds.includes(animeInfo.mal_id)) {
-                        return;
-                      }
-                      const updatedIds = [...existingIds, animeInfo.mal_id];
-                      // save the updated list back to local storage
-                      localStorage.setItem(
-                        "animeIds",
-                        JSON.stringify(updatedIds)
-                      );
-                    }}
-                  >
-                    <i className="bx bx-plus"></i> Add to list
-                  </button>
-                </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
-      </motion.section>
+      </motion.article>
     </>
   );
 }
 
-export default Upcoming
+export default Upcoming;

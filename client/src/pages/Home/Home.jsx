@@ -1,27 +1,21 @@
 import React from "react";
-import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
+import Cards from "../../components/cards/Cards";
 import Season from "../../components/season/Season";
-import TopAnime from "../../components/topAnime/TopAnime";
+import ScrollToTop from "react-scroll-to-top";
 import Upcoming from "../../components/upcoming/Upcoming";
-// import Upcoming from "../../components/Upcoming/Upcoming";
-// import TopAnime from "../../components/TopAnime/TopAnime";
-// import Power from "../../components/Power/Power";
-// import Footer from "../../components/Footer/Footer";
 
 function Home() {
   return (
     <>
-      <Header />
-      <Season />
-      <Upcoming/>
-      <TopAnime/>
-      <Footer />
-
-      {/* <Upcoming /> */}
-      {/* <TopAnime /> */}
-      {/* <Power /> */}
-      {/* <Footer /> */}
+      <div className="">
+        <Header />
+        <div style={{ marginTop: "10px" }} />
+        <ScrollToTop smooth />
+        <Cards />
+        <Season />
+        <Upcoming />
+      </div>
     </>
   );
 }
