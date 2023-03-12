@@ -32,7 +32,7 @@ function Header() {
           <div className="relative flex flex-col items-start w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:max-w-screen-xl">
             <div className="mb-16 lg:my-40 lg:max-w-lg lg:pr-5">
               <h2 className="mb-5 text-3xl font-bold text-auburn">
-                Track, share and
+                Track, share and 
                 <br className="hidden md:block" />
                 discover your new favorite anime with
                 <span className="inline-block text-rosy indent-2">Anikaze</span>
