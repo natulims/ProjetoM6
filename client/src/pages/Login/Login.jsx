@@ -17,7 +17,7 @@ function Login() {
               Welcome to Anikaze!
             </h2>
             <p className="text-mountbatten text-center">
-              Already have an account?{" "}
+              Don't have an account?{" "}
               <Link to="/sign_up" className="text-auburn">
                 Sign in
               </Link>

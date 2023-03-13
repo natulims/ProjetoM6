@@ -15,7 +15,7 @@ function Cards() {
         className="m-5"
       >
       <div className="flex justify-center rounded-full lg:my-[8rem]">
-        <motion.div whileHover={{ scale: 0.9 }} whileTap={{ scale: 0.5 }}>
+        <motion.div whileHover={{ scale: 0.9 }}>
           <div className="flex flex-col rounded-full shadow-lg md:max-w-xl md:flex-row">
             <img
               className="h-96 w-full rounded-full object-cover md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
