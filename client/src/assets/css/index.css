@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/*-----------------------------------------*/
+/*-----------------------------------------*/
+/*-----------------------------------------*/
+body {
+  font-size: 15px;
+  color: #967578;
+  font-family: "Baloo Chettan 2", cursive;
+  background-image: linear-gradient(to top, #f7e7e6, #f4e4e3, #f2e2e0, #efdfde, #ecdddb);
+}/*# sourceMappingURL=index.css.map */
