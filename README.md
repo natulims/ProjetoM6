@@ -35,10 +35,9 @@
 <ul>
 <li><a href="https://jikan.moe">Jikan API</a></li>
 <li><a href="https://kitsu.docs.apiary.io">Kitsu API</a></li><br>
-and more...
 </ul>
 <br>
-Illustrations:<br>
+Ilustrações:<br>
  <a href="https://www.pixiv.net/en/artworks/88861621">Power Fanart</a><br>
  <a href="https://www.zerochan.net/3868109">Pochita Fanart</a></p>
 <hr/>
