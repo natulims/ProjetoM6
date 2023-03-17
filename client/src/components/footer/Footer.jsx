@@ -1,6 +1,6 @@
 import React from "react";
 // import { AnimatePresence, motion } from "framer-motion";
-import logo from "/logo1.png";
+import logo from "../../assets/logo1.png";
 // import { fadeIn } from "../../utilities/variant";
 
 function Footer() {

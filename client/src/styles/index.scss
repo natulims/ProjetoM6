@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*-----------------------------------------*/
+
+//color
+$mountbatten: #967578;
+
+/*-----------------------------------------*/
+
+//fonts
+$main-font: "Baloo Chettan 2", cursive;
+$details-font: "Poppins", sans-serif;
+
+/*-----------------------------------------*/
+
+body {
+  font-size: 15px;
+  color: $mountbatten;
+  font-family: $main-font;
+  background-image: linear-gradient(
+    to top,
+    #f7e7e6,
+    #f4e4e3,
+    #f2e2e0,
+    #efdfde,
+    #ecdddb
+  );
+}
