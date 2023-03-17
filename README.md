@@ -1,3 +1,4 @@
+*em construção*
 <h1>Projeto Final - Programadores Cariocas</h1>
 <h3>Sobre o projeto</h3>
 <p align="justify">Projeto Individual Fullstack para o curso Programadores Cariocas! O tema escolhido foi um site de anime, onde você pode adicionar ou remover um item da sua lista de favoritos, pode logar ou criar uma conta e acessar seu perfil. O projeto conta com funcionalidades básicas do CRUD. No front-end foi utilizado React e o back end foi feito com Node Express. Todo o programa foi estruturado corretamente  está funcionando corretamente sem apresentar nenhum erro.</p>
